@@ -35,33 +35,16 @@ bash ${SCRIPT_DIR}/miniconda.sh -b -p ${MINICONDA_ROOT}
 # https://anaconda.org/conda-forge/
 CONDA_FORGE_PACKAGES=(
   "html2text"
-#  "ipywidgets"
-#  "jupyterlab"
   "markdown"
   "markupsafe"
-#  "matplotlib"
-#  "numpy"
   "openai"
-#  "pandas"
-#  "scipy"
-#  "setproctitle"
-#  "scikit-learn"
-#  "transformers"
   "tiktoken"
-#  "tqdm"
-#  "yaml"
-)
-
-# https://anaconda.org/pytorch/repo
-PYTORCH_PACKAGED=(
+  "tqdm"
 )
 
 ${MINICONDA_ROOT}/bin/conda create --name ${VENV_NAME} --channel conda-forge --yes python=3.10
 ${MINICONDA_ROOT}/bin/conda install --name ${VENV_NAME} --channel conda-forge --yes ${CONDA_FORGE_PACKAGES[*]}
 
-if [ -n "${PYTORCH_PACKAGED}" ]; then
-  ${MINICONDA_ROOT}/bin/conda install --name ${VENV_NAME} --channel pytorch --yes ${PYTORCH_PACKAGED[*]}
-fi
 
 # Using PIP directly is necessary until M1 hardware is fully supported by the pytorch channel of miniconda
 PIP_PACKAGES=(
