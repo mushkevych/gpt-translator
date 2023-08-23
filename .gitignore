@@ -1,0 +1,27 @@
+# pycache
+**/__pycache__/*
+
+# Jupyter notebook checkopoints
+**/.ipynb_checkpoints/*
+
+# Jetbrains IDE artifacts
+.idea/
+*.iml
+
+# VScode configuration files
+.vscode
+
+# pytest
+.coverage*
+
+# virtual env
+venv/
+.miniconda/
+
+# library build files
+*.egg-info
+build/
+*.whl
+
+# secrets and keys
+secrets.py
