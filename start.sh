@@ -39,7 +39,7 @@ EOF
 elif [[ ${ACTION} = "translate" ]]; then
   if [[ $# -lt 3 ]]; then
     cat <<@
-  Follow the format below for MlFlow model import
+  Follow the format below for *translate* action
 
   Usage: $0 translate book_details
 
